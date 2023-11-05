@@ -26,7 +26,7 @@ const router = createBrowserRouter([
         element: <Home />,
         loader: async ({ params }) => {
           const response = await axios.get(
-            `https://pokeapi.co/api/v2/pokemon/${params.id}}`
+            `https://pokeapi.co/api/v2/pokemon/${params.id}`
           );
           console.log(response.data);
           return response.data;
