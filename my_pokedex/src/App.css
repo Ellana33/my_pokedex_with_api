@@ -1,1 +1,26 @@
+main, body {
+  background: linear-gradient(
+    to right,
+    #f0f0f0,
+    #dcdcdc,
+    #f0f0f0
+  ); /* Votre gradient de fond */
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
 
+main::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-image: linear-gradient(black 1px, transparent 1px),
+    linear-gradient(90deg, black 1px, transparent 1px);
+  background-size: 50px 50px;
+  pointer-events: none; /* Cette propriété permet aux éléments en dessous d'être cliquables */
+}
